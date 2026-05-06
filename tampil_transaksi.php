@@ -1,12 +1,6 @@
-<?php include "koneksi.php"; ?>
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Data Transaksi</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<?php include "koneksi.php"; 
+include "header.php";
+?>
 
 <div class="container py-4">
   <h5 class="mb-3">Data Transaksi</h5>
