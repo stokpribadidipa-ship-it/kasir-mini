@@ -1,17 +1,6 @@
-<?php include "koneksi.php"; ?>
+<?php include "koneksi.php"; include 'header.php' ?>
 
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Barang</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-</head>
-<body class="bg-light py-4">
-
-<div class="container">
+<div class="container py-4">
   <div class="card shadow-sm border-0 rounded-3">
 
     <div class="card-header bg-white d-flex justify-content-between align-items-center py-3 border-bottom">
@@ -21,7 +10,6 @@
       <?php
         $count = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM barang"));
       ?>
-      <a href="barang.php" class="btn btn-sm btn-primary">Tambah Barang</a>
     </div>
 
     <div class="card-body p-0">
