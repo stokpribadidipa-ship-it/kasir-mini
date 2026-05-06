@@ -1,12 +1,6 @@
-<?php include 'koneksi.php'; ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Kasir</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<?php include 'koneksi.php'; 
+include 'header.php';
+?>
 
 <div class="container mt-5">
 <div class="card p-4 shadow">
@@ -37,6 +31,7 @@
 <!-- Jumlah -->
 <label>Jumlah</label>
 <input type="number" id="jumlah" name="jumlah" class="form-control mb-3" value="1">
+
 
 <!-- Bayar -->
 <label>Bayar</label>
