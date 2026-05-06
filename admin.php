@@ -13,8 +13,8 @@
                 <div class="card px-5 py-4 mt-5">
                     <h2>Halaman Admin</h2>
                     <span>
-                    <a href="barang.php">Kelola Barang</a> |
-                    <a href="logout.php">Logout</a>
+                    <a href="barang.php" class="btn btn-primary">Kelola Barang</a> |
+                    <a href="logout.php" class="btn btn-danger">Logout</a>
                     </span>
                 </div>
             </div>
