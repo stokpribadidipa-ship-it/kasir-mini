@@ -13,7 +13,7 @@
 
 <h3>Kasir</h3>
 
-<form method="POST" action="proses.php">
+<form method="POST" action="transaksi.php">
 
 <!-- Pilih Barang -->
 <label>Barang</label>
