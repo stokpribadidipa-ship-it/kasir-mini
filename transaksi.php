@@ -1,7 +1,7 @@
-<?php 
-include 'koneksi.php'; 
+<?php include 'koneksi.php';
 include 'header.php';
 ?>
+
 
 <div class="container">
 <div class="row justify-content-center">
@@ -12,7 +12,6 @@ include 'header.php';
 
 <form method="POST" action="proses_transaksi.php">
 
-<!-- PILIH BARANG -->
 <label>Barang</label>
 <select name="barang_id" id="barang" class="form-control mb-3" onchange="setHarga()" required>
     <option value="">-- Pilih Barang --</option>
@@ -47,6 +46,12 @@ include 'header.php';
 
 </form>
 
+<hr>
+
+<h5>Preview</h5>
+<p>Total: <span id="total">0</span></p>
+<p>Kembalian: <span id="kembalian">0</span></p>
+
 </div>
 </div>
 </div>
@@ -61,15 +66,18 @@ function setHarga() {
 }
 
 function hitung() {
-    let harga = document.getElementById("harga").value || 0;
-    let jumlah = document.getElementById("jumlah").value || 0;
-    let diskon = document.getElementById("diskon").value || 0;
-    let bayar = document.getElementById("bayar").value || 0;
+    let harga = parseFloat(document.getElementById("harga").value) || 0;
+    let jumlah = parseFloat(document.getElementById("jumlah").value) || 0;
+    let diskon = parseFloat(document.getElementById("diskon").value) || 0;
+    let bayar = parseFloat(document.getElementById("bayar").value) || 0;
 
     let subtotal = harga * jumlah;
     let potongan = (diskon / 100) * subtotal;
     let total = subtotal - potongan;
     let kembalian = bayar - total;
+
+    document.getElementById("total").innerText = total;
+    document.getElementById("kembalian").innerText = kembalian;
 }
 
 document.getElementById("jumlah").addEventListener("input", hitung);
